@@ -19,6 +19,7 @@ export default function Home() {
         const response = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${ADDRESS_PREFIX + URL}&key=${PROCESS_ENV_KEY}`);
         const data = await response.json();
         setResult(data);
+        console.log(data);
         setStatus("Finished");
     }
 
