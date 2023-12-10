@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import './globals.css'
 import {ReactNode} from "react";
+import RecoilRootProvider from "@/recoil/RecoilRootProvider";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -18,12 +19,14 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <main className="flex min-h-screen flex-col p-24 border-2 border-white">
+        <main className="flex min-h-screen flex-col p-24 border-4 border-white">
             <div className="w-full h-full">
-                <p className="mb-12 text-2xl">
+                <p className="mb-4 text-3xl">
                     Use Pagespeed
                 </p>
-                {children}
+                <RecoilRootProvider>
+                    {children}
+                </RecoilRootProvider>
             </div>
         </main>
         </body>
