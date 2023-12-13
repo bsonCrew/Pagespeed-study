@@ -1,4 +1,4 @@
-declare module 'jsonlint-mod' {
+declare module '@/types/lighthouse/internal/jsonlint-mod' {
   export function parse(input: string): unknown;
 
   interface SchemaIDReference {

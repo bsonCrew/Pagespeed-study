@@ -6,7 +6,7 @@
 
 import {EventEmitter} from 'events';
 
-declare module 'enquirer' {
+declare module '@/types/lighthouse/internal/enquirer' {
   interface ConfirmOption {
     name: string | (() => string);
     message: string | (() => string);

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-declare module 'pretty-json-stringify' {
+declare module '@/types/lighthouse/internal/pretty-json-stringify' {
   interface Params {
     tab?: string;
     spaceBeforeColon?: string;

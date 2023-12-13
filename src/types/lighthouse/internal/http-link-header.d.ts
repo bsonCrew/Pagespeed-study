@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-declare module 'http-link-header' {
+declare module '@/types/lighthouse/internal/http-link-header' {
   export interface Reference {
     uri: string;
     rel: string;

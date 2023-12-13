@@ -2,7 +2,7 @@
 
 import {useRecoilState} from "recoil";
 import toastState from "@/recoil/toastState";
-import Icon from "@/components/Icon";
+import Icon from "@/components/atom/Icon";
 
 export default function Toast() {
     const [isToastOpen, setIsToastOpen] = useRecoilState(toastState);

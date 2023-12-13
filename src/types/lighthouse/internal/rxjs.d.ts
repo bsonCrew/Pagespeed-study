@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-declare module 'rxjs' {
+declare module '@/types/lighthouse/internal/rxjs' {
   export * from 'rxjs/index.js';
 
   // Puppeteer uses a later version of rxjs as a dev dep.

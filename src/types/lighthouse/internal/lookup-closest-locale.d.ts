@@ -6,7 +6,7 @@
 
 type Locale = import('../lhr/settings.js').Locale;
 
-declare module 'lookup-closest-locale' {
+declare module '@/types/lighthouse/internal/lookup-closest-locale' {
   function lookupClosestLocale(locale: string[]|string|undefined, available: Record<Locale, any>): Locale|undefined;
 
   export = lookupClosestLocale;

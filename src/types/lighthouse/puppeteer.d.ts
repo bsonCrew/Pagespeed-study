@@ -15,13 +15,13 @@ type IfNotAny<T> = [T & 0] extends [1] ? never : T;
 
 declare module Puppeteer {
   // @ts-ignore Puppeteer is an optional dependency. `IfNotAny` will handle the `any` type if it's not installed.
-  export type Browser = puppeteerCore.Browser | IfNotAny<import('puppeteer').Browser>;
+  export type Browser = puppeteerCore.Browser | IfNotAny<import('@/types/lighthouse/puppeteer').Browser>;
   // @ts-ignore Puppeteer is an optional dependency. `IfNotAny` will handle the `any` type if it's not installed.
-  export type Page = puppeteerCore.Page | IfNotAny<import('puppeteer').Page>;
+  export type Page = puppeteerCore.Page | IfNotAny<import('@/types/lighthouse/puppeteer').Page>;
   // @ts-ignore Puppeteer is an optional dependency. `IfNotAny` will handle the `any` type if it's not installed.
-  export type CDPSession = puppeteerCore.CDPSession | IfNotAny<import('puppeteer').CDPSession>;
+  export type CDPSession = puppeteerCore.CDPSession | IfNotAny<import('@/types/lighthouse/puppeteer').CDPSession>;
   // @ts-ignore Puppeteer is an optional dependency. `IfNotAny` will handle the `any` type if it's not installed.
-  export type Connection = puppeteerCore.Connection | IfNotAny<import('puppeteer').Connection>;
+  export type Connection = puppeteerCore.Connection | IfNotAny<import('@/types/lighthouse/puppeteer').Connection>;
 }
 
 export default Puppeteer;

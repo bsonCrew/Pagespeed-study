@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-declare module 'parse-cache-control' {
+declare module '@/types/lighthouse/internal/parse-cache-control' {
   // Follows the potential settings of cache-control, see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
   interface CacheHeaders {
     'max-age'?: number;
