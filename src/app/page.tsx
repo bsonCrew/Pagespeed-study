@@ -1,19 +1,21 @@
 "use client"
 
-import {ChangeEvent, useState} from "react";
-import Input from "@/components/Input";
+import {ChangeEvent} from "react";
+import {useRecoilState} from "recoil";
 import {PROCESS_ENV_KEY} from "@/constants/pagespeed";
+import Input from "@/components/Input";
 import fetchPageSpeed from "@/utils/fetchPageSpeed";
 import Toast from "@/components/Toast";
+import urlState from "@/recoil/urlState";
+import analysisStatusState from "@/recoil/analysisStatusState";
+import analysisResultState from "@/recoil/analysisResultState";
 
 
 export default function Home() {
-    const [URL, setURL] = useState<string>("");
-    const [status, setStatus] = useState<string>("Idle");
-    const [result, setResult] = useState<string>("");
-    const handleAddressChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setURL(event.target.value);
-    }
+    const [URL, setURL] = useRecoilState<string>(urlState);
+    const [status, setStatus] = useRecoilState<string>(analysisStatusState);
+    const [result, setResult] = useRecoilState<object>(analysisResultState);
+    const handleAddressChange = (e: ChangeEvent<HTMLInputElement>) => setURL(e.target.value);
 
     const fetchAnalysis = async () => {
         setStatus("Loading...");

@@ -11,12 +11,8 @@ export default function Toast() {
 
     return (
         <div className="toast toast-start">
-            <div className="alert alert-info">
+            <div className="alert alert-info flex justify-between">
                 <span>New mail arrived.</span>
-                <Icon iconImg="deleteIcon"/>
-            </div>
-            <div className="alert alert-success">
-                <span>Message sent successfully.</span>
                 <Icon iconImg="deleteIcon"/>
             </div>
         </div>
